@@ -26,12 +26,12 @@ stringaSimon.innerHTML = randomArr;
 
 
 //
-setTimeout(none, 3000)
+setTimeout(none, 30000)
 function none(){
     stringaSimon.style.display = 'none';
 }
 
-setTimeout(game, 3100)
+setTimeout(game, 30100)
 function game(){
     let userArray = [];
     for (i = 0; i < 5; i++){
@@ -46,11 +46,11 @@ function game(){
             result.push(userArray[i]);
         }
     }
+    const container = document.querySelector('body');
     let strRisultato = document.createElement('div');
+    container.append(strRisultato);
+    strRisultato.innerHTML = `numeri azzeccati: ${result }<br> risultato=${result.length}`;
 
-    strRisultato.innerHTML = `risultato: ${result }<br> numeri azzeccati=${result.length}`;
-    console.log(result);
-    console.log(result.length);
 }
 
 
